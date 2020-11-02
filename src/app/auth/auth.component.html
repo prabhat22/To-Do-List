@@ -1,0 +1,43 @@
+<div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Login Form</h3>
+                  <form (ngSubmit)="onSubmit(logForm)" #logForm="ngForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email *" value="" name="email" ngModel   required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Your Password *" value="" name="pwd" ngModel required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btnForgetPwd">Forget Password?</a>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="col-md-6 login-form-2">
+                <div class="login-logo">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                </div>
+                <h3>Register Form</h3>
+                <form (ngSubmit)="onReg(regForm)" #regForm="ngForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email *" value="" ngModel name="signEmail" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Your Password *" value="" ngModel name="signPwd" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Register" />
+                    </div>
+                    <div class="form-group">
+
+                        <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

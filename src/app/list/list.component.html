@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      
+        <div class="col-sm-offset-3 col-sm-9">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="col-sm-2">
+                 <input type="text" class="form-control w-100" placeholder="Enter task" name="name" id="name" ngModel required >   
+                </div>
+            <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary" >Add Task</button>
+        </div>
+     
+        </form>
+        </div>
+    </div>
+ <div id="List">
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+     
+         <div class="list" *ngFor="let record of taskList;let i=index"style="cursor:pointer;" class="list-group-item clearfix">
+             <h4>{{record.taskname}}</h4> 
+             <button class="btn btn-success glyphicon glyphicon-ok" (click)="onDone(i)" [disabled]="record.isTaskDone"></button>
+             <button class="btn btn-danger glyphicon glyphicon-trash" (click)="onDelete(i)"></button>
+             <img src="data:image/png;base64,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"  alt="img" *ngIf="record.isTaskDone">
+        </div>
+      </div>
+    </div>
+</div>
+</div>
