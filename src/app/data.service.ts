@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { AuthService } from './auth/auth.service';
 import { ListService } from './list/list.service';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/Rx';
 
 @Injectable()
 export class DataService
